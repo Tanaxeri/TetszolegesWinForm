@@ -10,10 +10,17 @@ namespace TetszolegesWinForm
     {
 
         static public MainGUI mainGUI = null;
+        static public UjAdatGUI ujadatGUI = null;
+        static public ModositAdatGUI modositadatGUI = null;
+        static public TorolAdatGUI toroladatGUI = null;
+
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            toroladatGUI = new TorolAdatGUI();
+            modositadatGUI = new ModositAdatGUI();
+            ujadatGUI = new UjAdatGUI();
             mainGUI = new MainGUI();
             Application.Run(mainGUI);
         }

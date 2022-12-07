@@ -14,6 +14,12 @@ namespace TetszolegesWinForm
     {
 
         Adatbazis adatmain = new Adatbazis("localhost", "root", "", "videojatekok");
+        public static string ErtekText1 = "";
+        public static string ErtekText2 = "";
+        public static string ErtekText3 = "";
+        public static int ErtekText4 = 0;
+        public static string ErtekText5 = "";
+
         public MainGUI()
         {
             InitializeComponent();
@@ -132,22 +138,8 @@ namespace TetszolegesWinForm
         private void UjAdatButton_Main_Click(object sender, EventArgs e)
         {
 
-            if (adathiany())
-            {
+            Program.ujadatGUI.ShowDialog();
 
-                return;
-
-            }
-            if (adatmain.Hozzaad(JateknevText_Main.Text, JatekfajText_Main.Text, (int)JatekevNumUpDown_Main.Value, JatekPlatText_Main.Text))
-            {
-
-                Program.mainGUI.IDText_Main.Text = "";
-                Program.mainGUI.JateknevText_Main.Text = "";
-                Program.mainGUI.JatekfajText_Main.Text = "";
-                Program.mainGUI.JatekevNumUpDown_Main.Value = JatekevNumUpDown_Main.Minimum;
-                Program.mainGUI.JatekPlatText_Main.Text = "";
-
-            }
             JatekGrid_frissitese();
 
         }
@@ -161,16 +153,14 @@ namespace TetszolegesWinForm
                 return;
 
             }
-            if (adatmain.Modosit(int.Parse(IDText_Main.Text), JateknevText_Main.Text, JatekfajText_Main.Text, (int)JatekevNumUpDown_Main.Value, JatekPlatText_Main.Text))
-            {
 
-                Program.mainGUI.IDText_Main.Text = "";
-                Program.mainGUI.JateknevText_Main.Text = "";
-                Program.mainGUI.JatekfajText_Main.Text = "";
-                Program.mainGUI.JatekevNumUpDown_Main.Value = JatekevNumUpDown_Main.Minimum;
-                Program.mainGUI.JatekPlatText_Main.Text = "";
+            ErtekText1 = Program.mainGUI.IDText_Main.Text;
+            ErtekText2 = Program.mainGUI.JateknevText_Main.Text;
+            ErtekText3 = Program.mainGUI.JatekfajText_Main.Text;
+            ErtekText4 = (int)Program.mainGUI.JatekevNumUpDown_Main.Value;
+            ErtekText5 = Program.mainGUI.JatekPlatText_Main.Text;
 
-            }
+            Program.modositadatGUI.ShowDialog();
             JatekGrid_frissitese();
 
         }
@@ -184,16 +174,14 @@ namespace TetszolegesWinForm
                 return;
 
             }
-            if (adatmain.Torol(int.Parse(IDText_Main.Text)))
-            {
 
-                Program.mainGUI.IDText_Main.Text = "";
-                Program.mainGUI.JateknevText_Main.Text = "";
-                Program.mainGUI.JatekfajText_Main.Text = "";
-                Program.mainGUI.JatekevNumUpDown_Main.Value = JatekevNumUpDown_Main.Minimum;
-                Program.mainGUI.JatekPlatText_Main.Text = "";
+            ErtekText1 = Program.mainGUI.IDText_Main.Text;
+            ErtekText2 = Program.mainGUI.JateknevText_Main.Text;
+            ErtekText3 = Program.mainGUI.JatekfajText_Main.Text;
+            ErtekText4 = (int)Program.mainGUI.JatekevNumUpDown_Main.Value;
+            ErtekText5 = Program.mainGUI.JatekPlatText_Main.Text;
 
-            }
+            Program.toroladatGUI.ShowDialog();
             JatekGrid_frissitese();
 
         }

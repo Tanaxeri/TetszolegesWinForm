@@ -91,11 +91,32 @@
     <Compile Include="MainGUI.Designer.cs">
       <DependentUpon>MainGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModositAdatGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModositAdatGUI.Designer.cs">
+      <DependentUpon>ModositAdatGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TorolAdatGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TorolAdatGUI.Designer.cs">
+      <DependentUpon>TorolAdatGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UjAdatGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UjAdatGUI.Designer.cs">
+      <DependentUpon>UjAdatGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VideojatekAdat.cs" />
     <EmbeddedResource Include="MainGUI.resx">
       <DependentUpon>MainGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModositAdatGUI.resx">
+      <DependentUpon>ModositAdatGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,6 +127,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TorolAdatGUI.resx">
+      <DependentUpon>TorolAdatGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UjAdatGUI.resx">
+      <DependentUpon>UjAdatGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
